@@ -1,0 +1,45 @@
+    
+       
+<div class= container>
+    <div class=row>
+            <h2>*Enticing Content For Reader*</h2>
+           <div class= row col-md-4> <p>[Quotes, jokes, and trending topics]</p></div>
+                <br>
+            
+            </div>
+            <div class= container>
+                <div class= row
+            <h2>*Weather forecast*</h2>
+            <div class= col-md-4><p>[API goes here]</p></div>
+                <div class= col-md-4><p>[API goes here]</p></div>
+                 <div class= col-md-4><p>[API goes here]</p></div>
+                 
+                 
+            <br>
+            
+            <h2>*Recommendations*</h2>
+            <br>
+            <p>Hey there sexy! 
+            <br>
+            It looks ###RAINY### outside for the next ###4### hours (days/hours *conditional*).
+            <br>
+            <br>
+            <b>Suggestions:</b>
+            <br>
+            1. Wear a raincoat and boots.
+            <br>
+            2. Don't forget to bring an umbrella.
+            
+               <h2>*Join the dopeness!*</h2>
+            <br>
+            <p>  Hey there sexy! Insert the zipcode of your location 
+            and your phone number and we will send you text 
+            messages about what you should wear.
+            <br>
+            [INSERT CONTACT FORM here] 
+            <br>
+            [INSERT CHECKBOX of the agreeing to receive text messages here
+            with the text "I agree to receive text messages from Las Tormentas."]</p>
+            
+    </div>
+</div>

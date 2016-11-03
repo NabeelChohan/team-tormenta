@@ -1,0 +1,52 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+h1{
+  font-family: 'Raleway';
+padding-top:200px;
+   color:white;
+   font-size:100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+  
+   z-index:2;
+    
+}
+.header_color{
+  
+     width:150%;
+    height: 100vh;
+    z-index: 2;
+}
+
+
+.backgroundh1{
+    
+  display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+ 
+    z-index: -5;
+    
+  
+  
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ */
