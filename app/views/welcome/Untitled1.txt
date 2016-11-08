@@ -43,3 +43,33 @@
             
     </div>
 </div>
+
+
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<section>
+    <div class=container>
+        <div class=row>
+<figure> <img class=backgroundh1 src="https://static.pexels.com/photos/24146/pexels-photo.jpg"></figure>
+
+        </div>
+    </div>
+</section>
+
+<div class= container-fluid>  
+   
+ 
+    <div class=container>
+           <h1>trend</h1>
+           <h2> setters</h2>
+           
+              <br><br>
+     </div>
+</div>
+     <br> <br>
+      
+            <p>Weather forecast
+

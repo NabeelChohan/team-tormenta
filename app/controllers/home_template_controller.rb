@@ -1,0 +1,2 @@
+class HomeTemplateController < ApplicationController
+end
