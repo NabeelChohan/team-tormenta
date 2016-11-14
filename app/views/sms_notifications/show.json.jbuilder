@@ -1,0 +1,1 @@
+json.partial! "sms_notifications/sms_notification", sms_notification: @sms_notification

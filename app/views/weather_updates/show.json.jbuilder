@@ -1,0 +1,1 @@
+json.partial! "weather_updates/weather_update", weather_update: @weather_update

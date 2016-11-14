@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @weather_update.zip %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @weather_update.date %>
+</p>
+
+<p>
+  <strong>Time1:</strong>
+  <%= @weather_update.time1 %>
+</p>
+
+<p>
+  <strong>Time2:</strong>
+  <%= @weather_update.time2 %>
+</p>
+
+<%= link_to 'Edit', edit_weather_update_path(@weather_update) %> |
+<%= link_to 'Back', weather_updates_path %>

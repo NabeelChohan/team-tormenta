@@ -11,11 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161108023958) do
+ActiveRecord::Schema.define(version: 20161110184819) do
 
   create_table "forecasts", force: :cascade do |t|
     t.float    "lat"
     t.float    "lng"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sms_notifications", force: :cascade do |t|
+    t.integer  "day_temp"
+    t.string   "content"
+    t.integer  "precip"
+    t.integer  "user_ID"
+    t.integer  "eve_temp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_infos", force: :cascade do |t|
+    t.string   "name"
+    t.string   "number"
+    t.integer  "zip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "weather_updates", force: :cascade do |t|
+    t.integer  "zip"
+    t.date     "date"
+    t.time     "time1"
+    t.string   "time2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

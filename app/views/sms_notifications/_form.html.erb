@@ -1,0 +1,37 @@
+<%= form_for(@sms_notification) do |f| %>
+  <% if @sms_notification.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sms_notification.errors.count, "error") %> prohibited this sms_notification from being saved:</h2>
+
+      <ul>
+      <% @sms_notification.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :day_temp %><br>
+    <%= f.number_field :day_temp %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :precip %><br>
+    <%= f.number_field :precip %>
+  </div>
+  <div class="field">
+    <%= f.label :user_ID %><br>
+    <%= f.number_field :user_ID %>
+  </div>
+  <div class="field">
+    <%= f.label :eve_temp %><br>
+    <%= f.number_field :eve_temp %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

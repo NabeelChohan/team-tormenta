@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :weather_updates
+  resources :weather_updates
+  resources :sms_notifications
+  resources :user_infos
   resources :forecasts
   get 'welcome/index'
 root 'welcome#index'

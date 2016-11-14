@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  zip: 1
+  date: 2016-11-10
+  time1: 2016-11-10 18:48:37
+  time2: MyString
+
+two:
+  zip: 1
+  date: 2016-11-10
+  time1: 2016-11-10 18:48:37
+  time2: MyString

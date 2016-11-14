@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day_temp: 1
+  content: MyString
+  precip: 1
+  user_ID: 1
+  eve_temp: 1
+
+two:
+  day_temp: 1
+  content: MyString
+  precip: 1
+  user_ID: 1
+  eve_temp: 1

@@ -38,7 +38,7 @@
       color: #fff;
       padding: 290px 25px;
       font-family: Raleway, sans-serif;
-      font-size: 50px;
+      font-size: 250%;
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
@@ -223,8 +223,8 @@
 </nav>
 
 <div class="jumbotron text-center">
- 
- <p>trend setters</p>
+  <p>trend setters</p>
+
  </div>
 
 <!-- Container (About Section) -->
@@ -236,7 +236,7 @@
       <h4>Fashionable outfits inspired by unique weather</h4><br>
       <p>We know the feeling you get when you go about your day fearless until... it starts to rain. So we're prepared to give you a jumpstart on your day by curating a unique message based upon your location to make sure your prepared for the worst. To become apart of this clickbelow  </p>
       <br>
-      <a class="btn btn-default btn-lg" href="#contact">sign me up</a>
+      <input type="button" class="btn btn-default btn-lg slideanim" value = "Sign me up" onClick="document.getElementById('contact').scrollIntoView();" />
     </div>
     <div class="col-sm-4">
       <span style=font-size:150px class="glyphicon glyphicon-cloud"></span>
@@ -253,35 +253,17 @@
   <h4>What your day will look like</h4>
   <br>
   <h4> FORECAST WEATHER INFORMATION GOES HERE</h4>
+   <div class=container>
+     <div class= row>
+       <div id=weather class= col-md-12></div>
+      </div>
+    </div>
 </div>
 
 <!-- Container (Trending Section) -->
 <div id="trending" class="container-fluid text-center">
   <h2>TRENDING</h2><br>
   <h4>PLACEHOLDER FOR CLOTHES AND TRENDING SHIT BASED ON THE SEASON</h4>
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="paris.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Paris</strong></p>
-        <div id=weather></div>      
-        
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="newyork.jpg" alt="New York" width="400" height="300">
-        <p><strong>New York</strong></p>
-        <p>We built New York</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
-        <p><strong>San Francisco</strong></p>
-        <p>Yes, San Fran is ours</p>
-      </div>
-    </div>
   </div><br>
   
   
@@ -317,7 +299,6 @@
 
 
 
-
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
@@ -326,13 +307,21 @@
 </footer>
 
 <script>
+// Docs at http://simpleweatherjs.com
 $(document).ready(function() {
   $.simpleWeather({
-    location: 'Austin, TX',
-    woeid: '',
+    woeid: '2357536', //2357536
+    location: '',
     unit: 'f',
     success: function(weather) {
-      html = '<p>'+weather.temp+'&deg;'+weather.units.temp+'</p>';
+      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+      html += '<li class="currently">'+weather.currently+'</li>';
+      html += '<li>'+weather.alt.temp+'&deg;C</li></ul>';
+      
+      for(var i=0;i<weather.forecast.length;i++) {
+        html += '<p>'+weather.forecast[i].day+': '+weather.forecast[i].high+'</p>';
+      }
   
       $("#weather").html(html);
     },
@@ -341,6 +330,7 @@ $(document).ready(function() {
     }
   });
 });
+
 </script>
 <script>
 $(document).ready(function(){
@@ -381,4 +371,3 @@ $(document).ready(function(){
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
 </body>
 </html>
-

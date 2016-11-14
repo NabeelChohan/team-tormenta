@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sms Notifications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Day temp</th>
+      <th>Content</th>
+      <th>Precip</th>
+      <th>User id</th>
+      <th>Eve temp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sms_notifications.each do |sms_notification| %>
+      <tr>
+        <td><%= sms_notification.day_temp %></td>
+        <td><%= sms_notification.content %></td>
+        <td><%= sms_notification.precip %></td>
+        <td><%= sms_notification.user_ID %></td>
+        <td><%= sms_notification.eve_temp %></td>
+        <td><%= link_to 'Show', sms_notification %></td>
+        <td><%= link_to 'Edit', edit_sms_notification_path(sms_notification) %></td>
+        <td><%= link_to 'Destroy', sms_notification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sms notification', new_sms_notification_path %>

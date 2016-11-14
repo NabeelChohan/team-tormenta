@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day temp:</strong>
+  <%= @sms_notification.day_temp %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @sms_notification.content %>
+</p>
+
+<p>
+  <strong>Precip:</strong>
+  <%= @sms_notification.precip %>
+</p>
+
+<p>
+  <strong>User id:</strong>
+  <%= @sms_notification.user_ID %>
+</p>
+
+<p>
+  <strong>Eve temp:</strong>
+  <%= @sms_notification.eve_temp %>
+</p>
+
+<%= link_to 'Edit', edit_sms_notification_path(@sms_notification) %> |
+<%= link_to 'Back', sms_notifications_path %>
