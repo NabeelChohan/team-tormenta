@@ -1,10 +1,11 @@
 class UserInfosController < ApplicationController
-  before_action :set_user_info, only: [:show, :edit, :update, :destroy]
+ before_action :set_user_info, only: [:show, :edit, :update, :destroy]
 
   # GET /user_infos
   # GET /user_infos.json
   def index
     @user_infos = UserInfo.all
+    
   end
 
   # GET /user_infos/1

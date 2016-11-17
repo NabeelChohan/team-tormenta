@@ -6,6 +6,6 @@ class CreateUserInfos < ActiveRecord::Migration
       t.integer :zip
 
       t.timestamps null: false
-    end
+    end 
   end
 end

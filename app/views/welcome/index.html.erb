@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
-  <style>
-  body {
+<style>
+body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
      
@@ -196,10 +183,7 @@
         font-size: 150px;
     }
   }
-
   </style>
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -223,7 +207,7 @@
 </nav>
 
 <div class="jumbotron text-center">
-  <p>trend setters</p>
+  <p>weather driven fashion</p>
 
  </div>
 
@@ -240,7 +224,7 @@
     </div>
     <div class="col-sm-4">
       <span style=font-size:150px class="glyphicon glyphicon-cloud"></span>
-          </div>
+    </div>
   </div>
 </div>
 
@@ -255,47 +239,51 @@
   <h4> FORECAST WEATHER INFORMATION GOES HERE</h4>
    <div class=container>
      <div class= row>
-       <div id=weather class= col-md-12></div>
-      </div>
+       <div id=weather></div>
     </div>
+  </div>
 </div>
+
 
 <!-- Container (Trending Section) -->
 <div id="trending" class="container-fluid text-center">
   <h2>TRENDING</h2><br>
   <h4>PLACEHOLDER FOR CLOTHES AND TRENDING SHIT BASED ON THE SEASON</h4>
-  </div><br>
+  </div>
   
   
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">SIGN UP</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>sign up here u little shits</p>
+  <h2 class="text-center">SIGN UP HERE U LITTLE SHITS</h2>
+  
+  
+    <%= form_for :user_info, url: user_infos_path do |f| %>
+ <div class="row">
+    <div class="col-sm-4 form-group"> 
+        <%= f.label :name %>
+         <%= f.text_field :name, placeholder: "Name" %>
+      
     </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Number" type="email" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="zip" name="zip" placeholder="Zipcode" type="location" required>
-        </div>
-      </div>
-     <br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Submit</button>
-        </div>
-      </div>
+      <div class="col-sm-4 form-group">
+         <%= f.label :number %>
+         <%= f.text_field :number, placeholder: "Number" %>
+      
     </div>
-  </div>
+      <div class="col-sm-4 form-group"> 
+         <%= f.label :zip %>
+         <%= f.text_field :zip, placeholder: "Zipcode" %>
+       
+      </div>
 </div>
+      <div class=row> 
+       <div class= 'col-sm-12 btn btn-default btn-lg slideanim'>
+       <%= f.submit %>
+       
+       </div>
+  
+    <% end %>
+
 
 
 
@@ -306,32 +294,7 @@
   <p>crafted by <span class= "service"></span></span>Las Tormentas</p>
 </footer>
 
-<script>
-// Docs at http://simpleweatherjs.com
-$(document).ready(function() {
-  $.simpleWeather({
-    woeid: '2357536', //2357536
-    location: '',
-    unit: 'f',
-    success: function(weather) {
-      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-      html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.alt.temp+'&deg;C</li></ul>';
-      
-      for(var i=0;i<weather.forecast.length;i++) {
-        html += '<p>'+weather.forecast[i].day+': '+weather.forecast[i].high+'</p>';
-      }
-  
-      $("#weather").html(html);
-    },
-    error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
-    }
-  });
-});
 
-</script>
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
@@ -368,6 +331,9 @@ $(document).ready(function(){
   });
 })
 </script>
+
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
-</body>
-</html>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+
