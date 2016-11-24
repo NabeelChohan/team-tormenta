@@ -52,3 +52,5 @@ group :development do
   gem 'redis-rails'
 end
 
+# Use Shopstyle gem for displaying trend products
+
