@@ -31,6 +31,15 @@
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
+  
+<div class="field">
+   <%= f.number_field :number, placeholder: "Number" %>
+ </div>
+ <div class="field">
+   <%= f.zip_field :zip, placeholder: "Zipcode" %>
+</div>
+
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
